@@ -117,8 +117,6 @@ export function PingWS(ws: ReconnectingWebsocket, o: PingPongOptions = {}): Reco
       clearTimeout(pingTimeout)
     } else if (PongMessage.guard(message)) {
       ws.send(data)
-    } else {
-      console.log(data)
     }
   })
   ws.addEventListener("close", () => {
@@ -133,7 +131,7 @@ export function PingWS(ws: ReconnectingWebsocket, o: PingPongOptions = {}): Reco
   return ws
 }
 
-type messageHandler = (event: { data: unknown }) => unknown
+type messageHandler = (event: { data: unknown }) => void
 
 export function filterPingPongMessages(listener: messageHandler): messageHandler {
   return (event): unknown => {

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import ReconnectingWebSocket from "reconnecting-websocket"
-import { PingWS } from "@cs125/pingpongws"
+import { PingWS, filterPingPongMessages } from "@cs125/pingpongws"
 
 export const Lead: React.FC = ({ children }) => {
   return <div style={{ fontSize: "1.2rem" }}>{children}</div>
@@ -24,6 +24,12 @@ export const PingPonger: React.FC = () => {
         clearInterval(intervalTimer)
       }
     })
+    ws.addEventListener(
+      "message",
+      filterPingPongMessages(({ data }) => {
+        console.log(data)
+      })
+    )
     return (): void => {
       ws.close()
     }
