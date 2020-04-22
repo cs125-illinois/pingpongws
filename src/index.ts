@@ -131,7 +131,8 @@ export function PingWS(ws: ReconnectingWebsocket, o: PingPongOptions = {}): Reco
   return ws
 }
 
-type messageHandler = (event: { data: unknown }) => void
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type messageHandler = (event: any) => void
 
 export function filterPingPongMessages(listener: messageHandler): messageHandler {
   return (event): void => {
