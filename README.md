@@ -1,6 +1,6 @@
 # @cs125/pingpongws
 
-[![npm version](https://badge.fury.io/js/%40cs125%2Fpingpongws.svg)](https://badge.fury.io/js/%40cs125%2Fpingpongws)
+![npm](https://img.shields.io/npm/v/@cs125/pingpongws)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Typescript support for wrapping WebSocket connections to enable bidirectional ping-pong messages.
