@@ -49,7 +49,7 @@
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-react": "^7.19.0",
     "husky": "^4.2.5",
-    "koa": "^2.11.0",
+    "koa": "^3.0.1",
     "koa-easy-ws": "https://github.com/cs125-illinois/koa-easy-ws.git",
     "koa-router": "^8.0.8",
     "lint-staged": "^10.2.2",
