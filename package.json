@@ -54,7 +54,7 @@
     "koa-router": "^8.0.8",
     "lint-staged": "^10.2.2",
     "nodemon": "^2.0.3",
-    "npm-check-updates": "^4.1.2",
+    "npm-check-updates": "^19.3.1",
     "parcel": "^1.12.4",
     "prettier": "^2.0.5",
     "prettier-package-json": "^2.1.3",
